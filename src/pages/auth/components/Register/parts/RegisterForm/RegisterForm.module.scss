@@ -1,0 +1,174 @@
+@use 'variables' as v;
+
+.component {
+  margin: 12px auto 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include v.bold-text(24px, 28px);
+
+  color: v.$colorBlack;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.field {
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  max-width: 294px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__input {
+    min-width: 294px;
+    padding-right: 30px;
+    margin-bottom: 4px;
+  }
+
+  &__rememberBtn {
+    @include v.medium-text(14px, 16px);
+    @include v.buttonDefault();
+
+    color: v.$colorBlue;
+    margin: 32px 0 4px 0;
+    align-self: flex-end;
+    transition: opacity 0.4s ease;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  &__iconBtn {
+    @include v.buttonDefault();
+    position: absolute;
+    top: 30px;
+    right: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  &_checkbox {
+    flex-direction: row;
+    column-gap: 8px;
+    margin-bottom: 32px;
+    align-items: center;
+  }
+
+  &__button {
+    @include v.medium-text(16px, 28px);
+
+    color: #fff;
+
+    &:nth-child(2) {
+      margin-top: 16px;
+      background: transparent;
+      color: v.$colorBlue;
+    }
+  }
+}
+
+.errors {
+  min-height: 16px;
+  margin: 0 0 8px;
+
+  &__error {
+    @include v.regular-text(12px, 16px);
+
+    margin: 0;
+    color: v.$colorError;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 340px;
+  margin-top: 9px;
+
+  &__subtitle {
+    @include v.medium-text(12px, 24px);
+
+    color: v.$colorBlack;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration-line: underline;
+    transition: color 0.4s ease;
+    color: v.$colorGray;
+
+    &:hover {
+      color: rgba(77, 79, 85, 0.6);
+      transition: color 0.4s ease;
+    }
+
+    &:focus {
+      color: #4d4f55;
+      transition: color 0.4s ease;
+    }
+  }
+}
+
+.checkbox {
+  cursor: pointer;
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid v.$colorGrayBorder;
+      border-radius: 4px;
+      transition: all 0.4s ease;
+    }
+
+    &:hover::before {
+      border: 1px solid v.$colorBlue;
+      transition: all 0.4s ease;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + .checkbox__label::before {
+      border-color: v.$colorBlueDark;
+      background-color: v.$colorBlueDark;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+  }
+
+  &__title {
+    @include v.medium-text(14px, 18px);
+
+    color: v.$colorBlack;
+    margin: 0;
+  }
+}

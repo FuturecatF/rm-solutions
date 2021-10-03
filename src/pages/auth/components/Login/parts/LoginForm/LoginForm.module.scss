@@ -1,0 +1,107 @@
+@use 'variables' as v;
+
+.component {
+  margin: 45px auto 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 294px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include v.bold-text(24px, 28px);
+
+  color: v.$colorBlack;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.field {
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__input {
+    min-width: 294px;
+    padding-right: 30px;
+  }
+
+  &__rememberBtn {
+    @include v.medium-text(14px, 16px);
+    @include v.buttonDefault();
+
+    color: v.$colorBlue;
+    margin: 32px 0 4px 0;
+    align-self: flex-end;
+    transition: opacity 0.4s ease;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  &__iconBtn {
+    @include v.buttonDefault();
+    position: absolute;
+    top: 30px;
+    right: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  &__button {
+    @include v.medium-text(16px, 28px);
+
+    color: #fff;
+    margin-top: 32px;
+
+    &:nth-child(2) {
+      margin-top: 16px;
+      background: transparent;
+      color: v.$colorBlue;
+    }
+  }
+  &__subtitle {
+    @include v.medium-text(14px, 28px);
+
+    color: #000;
+    text-align: center;
+    margin: 16px 0;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    color: v.$colorBlue;
+  }
+
+  &__button {
+    @include v.buttonDefault();
+
+    width: 74px;
+    height: 50px;
+    border: 1px solid v.$colorGrayLight;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+}

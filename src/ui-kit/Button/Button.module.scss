@@ -1,0 +1,29 @@
+@use 'variables' as v;
+
+.component {
+  @include v.buttonDefault();
+
+  background-color: v.$colorBlue;
+  border: 2px solid v.$colorBlue;
+  border-radius: 8px;
+  padding: 6px 0 6px 0;
+  width: 100%;
+  min-height: 40px;
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+
+  &:hover:enabled {
+    background-color: v.$colorBlueDark;
+    border: 2px solid v.$colorBlueDark;
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+
+  &:disabled {
+    background: #a4aab5;
+    border: 2px solid #a4aab5;
+    cursor: initial;
+  }
+}

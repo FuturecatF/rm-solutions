@@ -1,0 +1,109 @@
+@use 'variables' as v;
+
+.component {
+  margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include v.bold-text(24px, 28px);
+
+  color: v.$colorBlack;
+  margin: 0 0 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px;
+  padding: 0;
+  border: 0;
+
+  &:nth-child(4) {
+    margin: 0;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &__title {
+    @include v.medium-text(18px, 22px);
+
+    margin: 0 0 32px;
+  }
+}
+
+.prompt {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 356px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 4px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+
+  &__title {
+    @include v.regular-text(14px, 22px);
+
+    color: v.$colorBlack;
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 172px 172px 270px 270px;
+  column-gap: 24px;
+
+  &_second {
+    grid-template-columns: 270px 270px 172px 172px;
+  }
+
+  &_third {
+    grid-template-columns: 270px 270px 368px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__itemIcon {
+    @include v.buttonDefault();
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: opacity 0.4s ease;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.4s ease;
+    }
+
+    &:hover + .prompt {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
+
+.button {
+  @include v.medium-text(16px, 28px);
+
+  max-width: 270px;
+  color: #fff;
+  margin: 54px 0 0 auto;
+}

@@ -1,0 +1,17 @@
+@use 'variables' as v;
+
+.component {
+  @include v.regular-text(14px, 18px);
+
+  border: 1px solid v.$colorGrayBorder;
+  outline: none;
+  border-radius: 4px;
+  margin: 0;
+  width: 100%;
+  padding: 7px 0 7px 16px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: v.$colorGrayBorder;
+  }
+}

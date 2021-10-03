@@ -1,0 +1,8 @@
+@use 'variables' as v;
+
+.component {
+  @include v.medium-text(14px, 18px);
+
+  color: v.$colorBlack;
+  padding-bottom: 8px;
+}

@@ -1,0 +1,36 @@
+$colorGray: #4d4f55;
+$colorGrayLight: #dbdbdb;
+$colorBlack: #111214;
+$colorGrayBorder: #969696;
+$colorBlue: #4980f2;
+$colorBlueDark: #2d6ef0;
+$colorError: #f00b6a;
+
+@mixin regular-text($size, $line-height) {
+  font-family: 'Roboto', 'Open Sans';
+  font-weight: 400;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin medium-text($size, $line-height) {
+  font-family: 'Roboto', 'Open Sans';
+  font-weight: 500;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin bold-text($size, $line-height) {
+  font-family: 'Roboto', 'Open Sans';
+  font-weight: 700;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin buttonDefault() {
+  background: transparent;
+  border: none;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+}
