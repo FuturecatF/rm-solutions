@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rm-solutions/static/css/main.33869d42.chunk.css",
+    "main.js": "/rm-solutions/static/js/main.8867b77f.chunk.js",
+    "main.js.map": "/rm-solutions/static/js/main.8867b77f.chunk.js.map",
+    "runtime-main.js": "/rm-solutions/static/js/runtime-main.05a6a0cb.js",
+    "runtime-main.js.map": "/rm-solutions/static/js/runtime-main.05a6a0cb.js.map",
+    "static/js/2.df8208c5.chunk.js": "/rm-solutions/static/js/2.df8208c5.chunk.js",
+    "static/js/2.df8208c5.chunk.js.map": "/rm-solutions/static/js/2.df8208c5.chunk.js.map",
+    "static/js/3.df18a3b8.chunk.js": "/rm-solutions/static/js/3.df18a3b8.chunk.js",
+    "static/js/3.df18a3b8.chunk.js.map": "/rm-solutions/static/js/3.df18a3b8.chunk.js.map",
+    "index.html": "/rm-solutions/index.html",
+    "static/css/main.33869d42.chunk.css.map": "/rm-solutions/static/css/main.33869d42.chunk.css.map",
+    "static/js/2.df8208c5.chunk.js.LICENSE.txt": "/rm-solutions/static/js/2.df8208c5.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/rm-solutions/static/media/Roboto-Regular.6da80660.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05a6a0cb.js",
+    "static/js/2.df8208c5.chunk.js",
+    "static/css/main.33869d42.chunk.css",
+    "static/js/main.8867b77f.chunk.js"
+  ]
+}
