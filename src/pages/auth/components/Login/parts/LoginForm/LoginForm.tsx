@@ -14,6 +14,7 @@ const LoginForm = () => {
   }
   return (
     <form className={styles.component} noValidate>
+      <a href="http://localhost:3000/" target="_blank">перейти</a>
       <h2 className={styles.title}>Вход</h2>
       <fieldset className={styles.field}>
         <Label htmlFor='email'>Email</Label>

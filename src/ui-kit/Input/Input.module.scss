@@ -1,7 +1,7 @@
 @use 'variables' as v;
 
 .component {
-  @include v.regular-text(14px, 18px);
+  @include v.regular-text(16px, 18px);
 
   border: 1px solid v.$colorGrayBorder;
   outline: none;

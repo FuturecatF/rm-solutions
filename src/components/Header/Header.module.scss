@@ -1,10 +1,10 @@
-.component {
+.header {
   min-height: 78px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-}
 
-.logo {
-  margin-left: 64px;
+  &__logo {
+    margin-left: 64px;
+  }
 }

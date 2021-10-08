@@ -1,10 +1,13 @@
-import styles from './App.module.scss'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
+
+import { Header, Footer } from 'components'
+
 import Router from './Router'
+
+import styles from './App.module.scss'
+
 const App = () => {
   return (
-    <div className={styles.component}>
+    <div className={styles['component']}>
       <Header />
       <Router />
       <Footer />
